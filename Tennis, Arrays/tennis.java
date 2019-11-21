@@ -7,23 +7,23 @@ public class tennis
 	public static void main(String[] args) 
 	{
 		String players[][] = {
-								{"Chonchito", "Gordis", "Panchito", "Chata", "Lupis", "Chuy", "Chipis", "Chucho"},
-								{"", "", "", "", "", "", "", ""}		};
+					{"Chonchito", "Gordis", "Panchito", "Chata", "Lupis", "Chuy", "Chipis", "Chucho"},
+					{"", "", "", "", "", "", "", ""}	};
 		assigningRanks(players);
 		printer(players, "Player's Ranks: ");
 		bubbleSort(players);
 		printer(players, "Sorted Ranks: ");
-		quarterFinals(players); 		// begins tournament
+		quarterFinals(players); 									// begins tournament
 	}
 	
-	static void assigningRanks( String players[][]) 												// only assign ranks where ranksTaken[x] == false
+	static void assigningRanks( String players[][]) 							// only assign ranks where ranksTaken[x] == false
 	{	
 		boolean ranksTaken[] = { false, false, false, false, false, false, false, false, false };	// rank corresponding to index = true if taken, ignoring [0], no rank 0
-		int number = 0;																			// stores potential number
+		int number = 0;											// stores potential number
 		
 		for(int a = 0; a < 8; a++)
 		{
-			number = random.nextInt(8) + 1;														// argument is exclusive.  interval = [1 - 8]
+			number = random.nextInt(8) + 1;								// argument is exclusive.  interval = [1 - 8]
 			
 			if(!ranksTaken[number])
 			{
