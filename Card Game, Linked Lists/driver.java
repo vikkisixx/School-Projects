@@ -13,9 +13,9 @@ public class driver
 		linkedListClass<cards> Pedro = new linkedListClass<cards>();
 		deckBuilder(deck);	
 		cards shuffledDeck[] = new cards[deck.size()];
-		shuffler( deck, shuffledDeck );						// putting linkedList cards into regular array to shuffle
+		shuffler( deck, shuffledDeck );					// putting linkedList cards into regular array to shuffle
 		deal( Conchita, Pedro, shuffledDeck );				// players obtain hands
-		turnChooser(Conchita, Pedro);						// begins game
+		turnChooser(Conchita, Pedro);					// begins game
 	}
 	
 	public static void deckBuilder( linkedListClass deck )
@@ -75,7 +75,7 @@ public class driver
 	
 	public static void turnChooser(linkedListClass Conchita, linkedListClass Pedro) 
 	{
-		int first = random.nextInt(10);							// choose first player randomly
+		int first = random.nextInt(10);					// choose first player randomly
 		
 		if(first > 4)
 		{
